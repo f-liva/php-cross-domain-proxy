@@ -1,8 +1,8 @@
 PHP Cross-Origin Proxy
 ===
 
-[![Downloads](https://poser.pugx.org/geekality/php-cross-domain-proxy/downloads?format=flat-square)](https://packagist.org/packages/geekality/php-cross-domain-proxy)
 [![Latest version](https://poser.pugx.org/geekality/php-cross-domain-proxy/version?format=flat-square)](https://packagist.org/packages/geekality/php-cross-domain-proxy)
+[![Downloads](https://poser.pugx.org/geekality/php-cross-domain-proxy/downloads?format=flat-square)](https://packagist.org/packages/geekality/php-cross-domain-proxy)
 [![License](https://poser.pugx.org/geekality/php-cross-domain-proxy/license?format=flat-square)](LICENSE.txt)
 
 Client-side HTTP requests, are limited by browser cross-origin restrictions.
