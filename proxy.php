@@ -1,9 +1,9 @@
 <?php
-
 /**
  * @param whitelist
  * @param curl_opts
  * @param zlib
+ * @param allowed_referers
  */
 
 // Get normalized headers and such
@@ -11,7 +11,12 @@ $headers = array_change_key_case(getallheaders());
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 $url = $headers['x-proxy-url'] ?? null;
 $cookie = $headers['x-proxy-cookie'] ?? null;
+$referer = parse_url($headers['referer'] ?? null, PHP_URL_HOST);
 
+// Check referer hostname
+if (! in_array($referer, $allowed_referers)) {
+    failure(403, "Invalid referer");
+}
 
 
 // Check that we have a URL
