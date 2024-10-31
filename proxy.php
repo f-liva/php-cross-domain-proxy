@@ -18,6 +18,10 @@ if (! in_array($referer, $allowed_referers)) {
     failure(403, "Invalid referer");
 }
 
+// Check referer hostname
+if ($method == 'OPTIONS') {
+    die(http_response_code(200));
+}
 
 // Check that we have a URL
 if( ! $url)
